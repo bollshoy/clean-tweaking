@@ -2,7 +2,7 @@
   "name": "clean-tweaking",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://github.com/bollshoy/clean-tweaking",
+  "homepage": "https://bollshoy.github.io/clean-tweaking",
   "type": "module",
   "scripts": {
     "predeploy": "npm run build",
