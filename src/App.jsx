@@ -7,7 +7,7 @@ import './scss/style.css'
 
 const App = () => {
 	return (
-		<BrowserRouter>
+		<BrowserRouter basename='/clean-tweaking'>
 			<Routes>
 				<Route path={'/'} element={<Home/>}></Route>
 				<Route path={'/buy'} element={<Buy/>}></Route>
