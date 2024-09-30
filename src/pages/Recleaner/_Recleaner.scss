@@ -1,0 +1,133 @@
+.recleaner {
+  position: relative;
+  height: 90vh;
+  margin-top: 50px;
+
+  &__container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 90vh;
+    overflow: hidden;
+    z-index: 0;
+    border-radius: 50px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: url("../../assets/images/recleanerBg.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      filter: blur(3px);
+      z-index: -1;
+    }
+  }
+
+  &__social {
+    position: relative;
+
+    .recleaner__list {
+      position: absolute;
+      left: 75%;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      padding-top: 20px;
+    }
+
+    .recleaner__item {
+      border: 3px solid #17499c;
+      padding: 8px 13px;
+      border-radius: 40px;
+      transition: .3s ease;
+
+
+
+      &:hover{
+        background: #17499c;
+        transition: .3s ease;
+      }
+    }
+  }
+
+  &__title {
+    margin-bottom: 35px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    h6 {
+      font-weight: 700;
+      font-size: 58px;
+      line-height: 62px;
+    }
+
+    .recleaner__img {
+      max-width: 75px;
+      border-radius: 50%;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  &__text {
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 26px;
+    color: var(--white);
+    margin-bottom: 30px;
+  }
+
+  &__users {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .users__text {
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 22px;
+      color: var(--white);
+    }
+
+    .recleaner__btn {
+      background: none;
+      border: 1.5px solid #0f3c85;
+      color: white;
+      padding: 15px 30px;
+      cursor: pointer;
+      font-size: 16px;
+      border-radius: 20px;
+      transition: all 0.3s;
+      margin-bottom: 20px;
+
+      &:hover {
+        background-color: #0f3c85;
+      }
+
+      &.pulse:hover {
+        animation: pulse 1s infinite;
+      }
+    }
+
+    @keyframes pulse {
+      0%, 100% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.1);
+      }
+    }
+  }
+}

@@ -1,0 +1,41 @@
+.statistics {
+  overflow: hidden;
+}
+
+.statistics__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 40px;
+}
+
+.statistics__title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+  margin-bottom: 50px;
+
+  h6 {
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 50px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .statistics__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .statistics__title {
+    img {
+      display: none;
+    }
+  }
+}

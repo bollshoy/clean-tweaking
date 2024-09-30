@@ -1,0 +1,32 @@
+//container&breakpoint
+$containerWidth: 1420px;
+$containerPadding: 20px;
+$breakpoint1200: 1200px;
+$breakpoint992: 992px;
+$breakpoint768: 768px;
+$breakpoint576: 576px;
+$breakpoint480: 480px;
+$breakpoint320: 320px;
+
+@mixin container {
+  max-width: $containerWidth;
+  padding: 0 $containerPadding;
+  align-items: center;
+  margin: 0 auto;
+}
+
+//colors
+:root {
+  --white: #ffffff;
+  --black: #000000;
+  --background: #121212;
+  --background1: #212123;
+  --background2: #191919;
+  --first-color: #6C3EB8;
+  --second-color: #576067;
+  --background-main: #0c0c0c;
+
+  --circle-blue: #007aff;
+  --circle-orange: #ff9900;
+  --circle-yellow: #ffcc00;
+}

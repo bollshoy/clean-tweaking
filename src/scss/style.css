@@ -1,0 +1,159 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+:before, :after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+:root {
+  --white: #ffffff;
+  --black: #000000;
+  --background: #121212;
+  --background1: #212123;
+  --background2: #191919;
+  --first-color: #6C3EB8;
+  --second-color: #576067;
+  --background-main: #0c0c0c;
+  --circle-blue: #007aff;
+  --circle-orange: #ff9900;
+  --circle-yellow: #ffcc00;
+}
+
+@font-face {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+  src: url("../assets/fonts/Montserrat-Light.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url("../assets/fonts/Montserrat-Regular.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  src: url("../assets/fonts/Montserrat-Medium.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: url("../assets/fonts/Montserrat-SemiBold.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Dosis", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  src: url("../assets/fonts/Dosis-Medium.woff2") format("woff2");
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--background-main);
+  font-family: "Montserrat", sans-serif;
+}
+
+.container {
+  max-width: 1420px;
+  padding: 0 20px;
+  align-items: center;
+  margin: 0 auto;
+}
+
+a, p, h1, h2, h3, h4, h5, h6, span, ul, li {
+  color: var(--white);
+}
+
+a, p {
+  font-size: clamp(14px, 5vw, 24px);
+  line-height: 1.2;
+  font-weight: 400;
+}
+
+h1, h2, h3, h4, h5, h6, span {
+  font-size: clamp(24px, 5vw, 48px);
+  line-height: 1.5;
+  font-weight: 700;
+}
+
+section {
+  margin-top: 100px;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,32 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--background-main);
+  font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+  @include container;
+}
+
+a, p, h1, h2, h3, h4, h5, h6, span, ul, li {
+  color: var(--white);
+}
+
+a, p {
+  font-size: clamp(14px, 5vw, 24px);
+  line-height: 1.2;
+  font-weight: 400;
+}
+
+h1, h2, h3, h4, h5, h6, span {
+  font-size: clamp(24px, 5vw, 48px);
+  line-height: 1.5;
+  font-weight: 700;
+}
+
+section {
+  margin-top: 100px;
+}

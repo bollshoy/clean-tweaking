@@ -1,0 +1,123 @@
+.software {
+  padding: 50px 0;
+
+  &__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+
+  &__title {
+    font-size: 48px;
+    line-height: 50px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  &__text {
+    font-weight: 400;
+    text-align: center;
+    font-size: 16px;
+    color: var(--second-color);
+    line-height: 20px;
+    margin-bottom: 80px;
+  }
+
+  .mySwiper {
+    .swiper-slide {
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      background: var(--background2);
+      padding: 20px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      height: 300px; /* Увеличьте высоту, если нужно больше места */
+      width: 200px; /* Увеличьте ширину для размещения содержимого */
+
+      .slide__title {
+        font-size: 18px;
+        font-weight: 500;
+        color: var(--white);
+        margin-bottom: 10px; /* Отступ снизу для заголовка */
+        height: 40px; /* Фиксированная высота для выравнивания */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .slide__img {
+        width: 86px;
+        height: 86px;
+        object-fit: contain;
+        margin-bottom: 15px;
+        flex-shrink: 0; /* Изображение не должно сжиматься */
+      }
+
+      .slide__text {
+        font-size: 14px;
+        color: var(--second-color);
+        margin-top: 10px; /* Отступ сверху для текста */
+        height: 50px; /* Фиксированная высота для выравнивания */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .slide__btn {
+        border: 1px solid var(--white);
+        padding: 5px 10px;
+        border-radius: 5px;
+        text-decoration: none;
+        color: var(--white);
+        font-size: 14px;
+        transition: all 0.3s ease;
+        margin-top: auto; /* Кнопка будет прижата к нижнему краю */
+
+        &:hover {
+          background-color: var(--white);
+          color: var(--second-color);
+          transition: all 0.3s ease;
+        }
+      }
+    }
+  }
+
+
+  .swiper-button-prev, .swiper-button-next {
+    color: var(--white);
+    border: 1px solid var(--white);
+    border-radius: 999px;
+    width: 20px;
+    height: 20px;
+    padding: 5px;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: var(--white);
+      color: var(--second-color);
+      transition: all 0.3s ease;
+    }
+
+    &::after {
+      font-size: 18px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .mySwiper {
+      .swiper-slide {
+        .slide__title {
+          font-size: 16px;
+        }
+
+        .slide__text {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
