@@ -164,7 +164,7 @@
   }
 
   &__image {
-    max-width: 450px;
+    max-width: 530px;
     perspective: 1000px;
 
     img {
@@ -213,5 +213,10 @@
       }
     }
   }
+}
 
+@media screen and (max-width: 1200px){
+  .recleaner__image {
+    max-width: 300px;
+  }
 }

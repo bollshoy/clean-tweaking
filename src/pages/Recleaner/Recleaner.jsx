@@ -9,9 +9,9 @@ import recleaner3 from '../../assets/images/recleaner/recleaner-3.png'
 import vk from '../../assets/icons/vk.svg'
 import github from '../../assets/icons/github.svg'
 import discord from '../../assets/icons/discord.svg'
+import home from '../../assets/icons/home.svg'
 import './_Recleaner.scss'
 import {NavLink} from 'react-router-dom'
-import Footer from '../../components/Footer/Footer.jsx'
 
 const Recleaner = () => {
 	const [userCount, setUserCount] = useState(0)
@@ -58,7 +58,8 @@ const Recleaner = () => {
 			image: github,
 			href: 'https://github.com/changelog-download'
 		},
-		{id: 3, title: 'VK', image: vk, href: 'https://vk.com/recleaner_official'}
+		{id: 3, title: 'VK', image: vk, href: 'https://vk.com/recleaner_official'},
+		{id: 4, title: 'Home', image: home, href: '/'},
 	]
 	
 	// animation gsap img
@@ -131,12 +132,12 @@ const Recleaner = () => {
 							<button onClick={incrementUserCount} className="recleaner__btn">
 								<a href="#" className="recleaner__link">Скачать</a>
 							</button>
-							<span className="recleaner__count">Скачали {userCount} раз(а)</span>
+							<span
+								className="recleaner__count">Скачали {userCount} раз(а)</span>
 						</div>
 					</div>
 				</div>
 			</section>
-			<Footer/>
 		</>
 	)
 }
