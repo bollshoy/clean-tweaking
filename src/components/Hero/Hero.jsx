@@ -55,11 +55,6 @@ const Hero = () => {
 					<img src={pc} alt="img"/>
 				</div>
 			</div>
-			<a href="#services" className="mouse__scroll">
-				<div className="mouse">
-					<div className="roll"></div>
-				</div>
-			</a>
 		</section>
 	)
 }

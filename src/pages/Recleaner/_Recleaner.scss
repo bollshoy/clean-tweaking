@@ -1,132 +1,148 @@
 .recleaner {
-  position: relative;
-  height: 90vh;
-  margin-top: 50px;
+  margin-top: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   &__container {
-    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+  }
+
+  &__social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    gap: 20px;
+
+    .recleaner__item {
+      border: 2px solid #17499c;
+      padding: 10px;
+      border-radius: 20px;
+      transition: 0.3s ease;
+
+      &:hover {
+        transition: .3s ease;
+        background: #17499c;
+      }
+
+      img {
+        width: 60px;
+      }
+    }
+  }
+
+  &__content {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    height: 90vh;
-    overflow: hidden;
-    z-index: 0;
-    border-radius: 50px;
 
-    &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background-image: url("../../assets/images/recleanerBg.png");
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center;
-      filter: blur(3px);
-      z-index: -1;
-    }
-  }
-
-  &__social {
-    position: relative;
-
-    .recleaner__list {
-      position: absolute;
-      left: 75%;
-      z-index: 1;
+    .recleaner__logo {
       display: flex;
       align-items: center;
-      gap: 20px;
-      padding-top: 20px;
-    }
-
-    .recleaner__item {
-      border: 3px solid #17499c;
-      padding: 8px 13px;
-      border-radius: 40px;
-      transition: .3s ease;
-
-
-
-      &:hover{
-        background: #17499c;
-        transition: .3s ease;
-      }
-    }
-  }
-
-  &__title {
-    margin-bottom: 35px;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-
-    h6 {
-      font-weight: 700;
-      font-size: 58px;
-      line-height: 62px;
-    }
-
-    .recleaner__img {
-      max-width: 75px;
-      border-radius: 50%;
+      justify-content: center;
+      max-width: 50px;
+      gap: 10px;
+      margin-bottom: 30px;
 
       img {
         width: 100%;
+        border-radius: 50%;
+      }
+
+      .recleaner__title {
+        font-weight: 700;
+        font-size: 42px;
+        line-height: 48px;
+        margin-top: 10px;
       }
     }
-  }
 
-  &__text {
-    font-weight: 500;
-    font-size: 22px;
-    line-height: 26px;
-    color: var(--white);
-    margin-bottom: 30px;
-  }
+    .recleaner__subtitle {
+      display: block;
+      font-weight: 500;
+      font-size: 32px;
+      line-height: 28px;
+      margin-bottom: 10px;
+    }
 
-  &__users {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    .users__text {
+    .recleaner__text {
       font-weight: 400;
       font-size: 18px;
       line-height: 22px;
-      color: var(--white);
+      letter-spacing: 2px;
+      margin-bottom: 50px;
+    }
+
+    .recleaner__user {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .recleaner__count {
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 32px;
     }
 
     .recleaner__btn {
       background: none;
-      border: 1.5px solid #0f3c85;
-      color: white;
-      padding: 15px 30px;
-      cursor: pointer;
-      font-size: 16px;
-      border-radius: 20px;
-      transition: all 0.3s;
       margin-bottom: 20px;
+      display: inline-block;
 
-      &:hover {
-        background-color: #0f3c85;
-      }
+      .recleaner__link {
+        border: 2px solid #17499c;
+        padding: 10px 20px;
+        border-radius: 20px;
+        transition: .3s ease-in-out;
 
-      &.pulse:hover {
-        animation: pulse 1s infinite;
+        &:hover {
+          transition: .3s ease;
+          background: #17499c;
+        }
       }
     }
+  }
 
-    @keyframes pulse {
-      0%, 100% {
-        transform: scale(1);
+  &__image {
+    max-width: 600px;
+    perspective: 1000px;
+
+    img {
+      width: 100%;
+      position: relative;
+      inset: 0;
+      transform-style: preserve-3d;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+      transition: transform .5s ease;
+
+      &:hover {
+        transform: translateZ(0) rotateY(20deg);
+        transition: transform .5s ease;
       }
-      50% {
-        transform: scale(1.1);
+
+      &:nth-child(1) {
+        position: relative;
+        z-index: 3;
+      }
+
+      &:nth-child(2) {
+        position: absolute;
+        z-index: -1;
+        left: -15%;
+      }
+
+      &:nth-child(3) {
+        position: absolute;
+        z-index: -2;
+        left: -25%;
       }
     }
   }

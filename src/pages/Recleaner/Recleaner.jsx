@@ -1,8 +1,12 @@
 import React, {useState, useEffect} from 'react'
 import {ref, set, get, child} from 'firebase/database'
 import {database} from '../../../firebaseConfig'
+import {gsap} from 'gsap'
 import Header from '../../components/Header/Header.jsx'
-import logo from '../../assets/images/recleanerLogo.jpg'
+import logo from '../../assets/images/recleaner/recleanerLogo.jpg'
+import recleaner1 from '../../assets/images/recleaner/recleaner-1.png'
+import recleaner2 from '../../assets/images/recleaner/recleaner-2.png'
+import recleaner3 from '../../assets/images/recleaner/recleaner-3.png'
 import vk from '../../assets/icons/vk.svg'
 import github from '../../assets/icons/github.svg'
 import discord from '../../assets/icons/discord.svg'
@@ -56,39 +60,76 @@ const Recleaner = () => {
 		{id: 3, title: 'VK', image: vk, href: 'https://vk.com/recleaner_official'}
 	]
 	
+	// animation gsap img
+	useEffect(() => {
+		gsap.fromTo(
+			'.recleaner__image',
+			{y: '-100vh', opacity: 0, rotate: '-30deg'},
+			{
+				y: '0',
+				opacity: 1,
+				rotate: '0deg',
+				duration: 1.5,
+				stagger: 0.3,
+				ease: 'power3.out'
+			}
+		)
+		
+		// animation gsap text
+		gsap.fromTo(
+			'.recleaner__text',
+			{x: '100vw', opacity: 0},
+			{x: '0', opacity: 1, duration: 1.5, ease: 'power3.out'}
+		)
+	}, [])
+	
 	return (
 		<>
 			<Header/>
 			<section className="recleaner">
-				<div className="recleaner__social">
-					<ul className="recleaner__list">
-						{recleanerList.map((item) => (
-							<li className={'recleaner__item'} key={item.id}>
-								<a href={item.href} target={'_blank'}>
-									<img className={'recleaner__social-img'} src={item.image}
-									     alt={item.title} width={'40px'}/>
-								</a>
-							</li>
-						))}
-					</ul>
-				</div>
 				<div className="recleaner__container container">
-					<div className="recleaner__title">
-						<img src={logo} alt="recleaner" className="recleaner__img"/>
-						<h6>RECLEANER</h6>
+					<div className="recleaner__image">
+						<img src={recleaner1} alt=""/>
+						<img src={recleaner2} alt=""/>
+						<img src={recleaner3} alt=""/>
 					</div>
-					<p className="recleaner__text">
-						Удобная программа для чистки мусора, быстрой <br/>
-						оптимизации Windows с повышением FPS и понижением задержек.
-					</p>
-					<div className="recleaner__users">
-						<button onClick={incrementUserCount} className="recleaner__btn">
-							<a href="#" className="recleaner__link pulse">Скачать</a>
-						</button>
-						<span className="users__text">{userCount} пользователей</span>
+					<div className="recleaner__content">
+						<div className="recleaner__logo">
+							<img src={logo} alt="logo" className="recleaner__logo-img"/>
+							<h6 className="recleaner__title">Recleaner</h6>
+						</div>
+						<span className="recleaner__subtitle">
+						101 проблема - 1 решение
+						</span>
+						<p className="recleaner__text">
+							- Удобная программа для чистки мусора, быстрой <br/>
+							оптимизации Windows с повышением FPS и понижением задержек.
+						</p>
+						<div className="recleaner__user">
+							<button onClick={incrementUserCount} className="recleaner__btn">
+								<a href="#" className="recleaner__link">Скачать</a>
+							</button>
+							<span className="recleaner__count">Скачали {userCount} раз</span>
+						</div>
 					</div>
 				</div>
 			</section>
+			<a href="#social" className="mouse__scroll">
+				<div className="mouse">
+					<div className="roll"></div>
+				</div>
+			</a>
+			<div className="recleaner__social" id="social">
+				{recleanerList.map((item) => (
+					<div key={item.id} className="recleaner__item">
+						<a href={item.href} className="recleaner__link-img" target="_blank"
+						   rel="noopener noreferrer">
+							<img src={item.image} alt={item.title}
+							     className="recleaner__item-img"/>
+						</a>
+					</div>
+				))}
+			</div>
 		</>
 	)
 }

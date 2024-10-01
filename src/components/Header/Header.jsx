@@ -24,12 +24,11 @@ const Header = () => {
 					</div>
 					<ul className={`header__list ${open ? 'open' : ''}`}>
 						<li>
-							<a href="/" className="header__link">Главная</a>
+							<NavLink to="/" className="header__link">Главная</NavLink>
 						</li>
 						<li>
-							<NavLink to={'/recleaner'} className={'header__link'}>
-								Recleaner
-							</NavLink>
+							<NavLink to="/recleaner"
+							         className="header__link">Recleaner</NavLink>
 						</li>
 						<li>
 							<a href="#footer" className="header__link">Контакты</a>
