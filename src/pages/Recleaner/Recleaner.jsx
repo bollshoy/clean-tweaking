@@ -46,20 +46,20 @@ const Recleaner = () => {
 	}, [])
 	
 	const recleanerList = [
+		{id: 1, title: 'Home', image: home, href: '/'},
 		{
-			id: 1,
+			id: 2,
 			title: 'Discord',
 			image: discord,
 			href: 'https://discord.gg/6muVyCHYsZ'
 		},
 		{
-			id: 2,
+			id: 3,
 			title: 'GitHub',
 			image: github,
 			href: 'https://github.com/changelog-download'
 		},
-		{id: 3, title: 'VK', image: vk, href: 'https://vk.com/recleaner_official'},
-		{id: 4, title: 'Home', image: home, href: '/'},
+		{id: 4, title: 'VK', image: vk, href: 'https://vk.com/recleaner_official'},
 	]
 	
 	// animation gsap img
