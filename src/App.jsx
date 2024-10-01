@@ -8,7 +8,7 @@ import './scss/style.css'
 
 const App = () => {
 	return (
-		<Router basename='/clean-tweaking'>
+		<Router>
 			<Routes>
 				<Route path={'/'} element={<Home/>}></Route>
 				<Route path={'/buy'} element={<Buy/>}></Route>
