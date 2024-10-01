@@ -184,7 +184,7 @@
         position: relative;
         z-index: 3;
         left: 0;
-        top: 4%;
+        top: 5%;
         transform: translateZ(30px) rotateY(10deg);
         transition: transform 1s ease-in-out;
 
@@ -194,7 +194,7 @@
         position: absolute;
         z-index: 2;
         left: -25%;
-        top: -6%;
+        top: -8%;
         transform: translateZ(20px) rotateY(10deg);
         transition: transform 1s ease-in-out;
 
@@ -204,7 +204,7 @@
         position: absolute;
         z-index: 1;
         left: -55%;
-        top: -12%;
+        top: -15%;
         transform: translateZ(10px) rotateY(10deg);
         transition: transform 1s ease-in-out;
       }
