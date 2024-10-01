@@ -2,7 +2,6 @@ import React, {useState, useEffect} from 'react'
 import {ref, set, get, child} from 'firebase/database'
 import {database} from '../../../firebaseConfig'
 import {gsap} from 'gsap'
-import Header from '../../components/Header/Header.jsx'
 import logo from '../../assets/images/recleaner/recleanerLogo.jpg'
 import recleaner1 from '../../assets/images/recleaner/recleaner-1.png'
 import recleaner2 from '../../assets/images/recleaner/recleaner-2.png'
@@ -11,6 +10,8 @@ import vk from '../../assets/icons/vk.svg'
 import github from '../../assets/icons/github.svg'
 import discord from '../../assets/icons/discord.svg'
 import './_Recleaner.scss'
+import {NavLink} from 'react-router-dom'
+import Footer from '../../components/Footer/Footer.jsx'
 
 const Recleaner = () => {
 	const [userCount, setUserCount] = useState(0)
@@ -85,7 +86,27 @@ const Recleaner = () => {
 	
 	return (
 		<>
-			<Header/>
+			<div className="recleaner__bg"></div>
+			<div className="recleaner__header">
+				<div className="header__container container">
+					<div className="recleaner__logo">
+						<img src={logo} alt="logo" className="logo__img"/>
+						<NavLink to={'/recleaner'} className={'logo'}>RECLEANER</NavLink>
+					</div>
+					<div className="recleaner__social" id="social">
+						{recleanerList.map((item) => (
+							<div key={item.id} className="recleaner__item">
+								<a href={item.href} className="recleaner__link-img"
+								   target="_blank"
+								   rel="noopener noreferrer">
+									<img src={item.image} alt={item.title}
+									     className="recleaner__item-img"/>
+								</a>
+							</div>
+						))}
+					</div>
+				</div>
+			</div>
 			<section className="recleaner">
 				<div className="recleaner__container container">
 					<div className="recleaner__image">
@@ -115,18 +136,7 @@ const Recleaner = () => {
 					</div>
 				</div>
 			</section>
-			<div className="recleaner__line"></div>
-			<div className="recleaner__social" id="social">
-				{recleanerList.map((item) => (
-					<div key={item.id} className="recleaner__item">
-						<a href={item.href} className="recleaner__link-img" target="_blank"
-						   rel="noopener noreferrer">
-							<img src={item.image} alt={item.title}
-							     className="recleaner__item-img"/>
-						</a>
-					</div>
-				))}
-			</div>
+			<Footer/>
 		</>
 	)
 }
