@@ -115,11 +115,6 @@ const Recleaner = () => {
 					</div>
 				</div>
 			</section>
-			<a href="#social" className="mouse__scroll">
-				<div className="mouse">
-					<div className="roll"></div>
-				</div>
-			</a>
 			<div className="recleaner__social" id="social">
 				{recleanerList.map((item) => (
 					<div key={item.id} className="recleaner__item">
