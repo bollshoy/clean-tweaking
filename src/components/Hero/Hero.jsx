@@ -35,7 +35,7 @@ const Hero = () => {
 		<section className="hero" onMouseMove={handleMouseMove}>
 			<div className="hero__container container">
 				<div className="hero__content">
-					<h1 className="hero__title"><Typewriter text="Лучшая оптимизация вашего ПК" delay={250}/></h1>
+					<h1 className="hero__title"><Typewriter text="Лучшая оптимизация вашего ПК" delay={150}/></h1>
 					<p className="hero__text" ref={textRef}>
 						Наши услуги направлены на оптимизацию вашего компьютерного опыта, и
 						мы приглашаем вас извлечь
