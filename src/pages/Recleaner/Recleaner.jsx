@@ -59,7 +59,12 @@ const Recleaner = () => {
 			image: github,
 			href: 'https://github.com/changelog-download'
 		},
-		{id: 4, title: 'VK', image: vk, href: 'https://vk.com/recleaner_official'},
+		{
+			id: 4,
+			title: 'VK',
+			image: vk,
+			href: 'https://vk.com/recleaner_official'
+		},
 	]
 	
 	// animation gsap img
@@ -97,12 +102,10 @@ const Recleaner = () => {
 					<div className="recleaner__social" id="social">
 						{recleanerList.map((item) => (
 							<div key={item.id} className="recleaner__item">
-								<a href={item.href} className="recleaner__link-img"
-								   target="_blank"
-								   rel="noopener noreferrer">
+								<NavLink to={item.href} rel="noopener noreferrer">
 									<img src={item.image} alt={item.title}
 									     className="recleaner__item-img"/>
-								</a>
+								</NavLink>
 							</div>
 						))}
 					</div>

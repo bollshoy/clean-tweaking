@@ -25,7 +25,7 @@ const Header = () => {
 					<ul className={`header__list ${open ? 'open' : ''}`}>
 						<NavLink to="/" className="header__link">Главная</NavLink>
 						<NavLink to="/recleaner" className="header__link">Recleaner</NavLink>
-						<a href="#footer" className="header__link">Контакты</a>
+						<NavLink to={'/buy'} className={'header__link'}>Контакты</NavLink>
 					</ul>
 				</nav>
 			</div>
