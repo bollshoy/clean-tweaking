@@ -96,14 +96,15 @@ const Recleaner = () => {
 					<div className="recleaner__content">
 						<div className="recleaner__logo">
 							<img src={logo} alt="logo" className="recleaner__logo-img"/>
-							<h6 className="recleaner__title">Recleaner</h6>
+							<h6 className="recleaner__title">RECLEANER</h6>
 						</div>
 						<span className="recleaner__subtitle">
 						101 проблема - 1 решение
 						</span>
 						<p className="recleaner__text">
-							- Удобная программа для чистки мусора, быстрой <br/>
-							оптимизации Windows с повышением FPS и понижением задержек.
+							Портативная программа для быстрой <br/>
+							настройки системы, обширным магазином <br/>
+							приложений, очистки мусора и многое другое!
 						</p>
 						<div className="recleaner__user">
 							<button onClick={incrementUserCount} className="recleaner__btn">

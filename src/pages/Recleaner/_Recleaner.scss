@@ -7,8 +7,8 @@
   &__container {
     display: flex;
     align-items: center;
+    gap: 50px;
     justify-content: space-between;
-    gap: 30px;
   }
 
   &__social {
@@ -46,7 +46,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      max-width: 50px;
+      max-width: 40px;
       gap: 10px;
       margin-bottom: 30px;
 
@@ -57,9 +57,8 @@
 
       .recleaner__title {
         font-weight: 700;
-        font-size: 42px;
-        line-height: 48px;
-        margin-top: 10px;
+        font-size: 38px;
+        line-height: 42px;
       }
     }
 
@@ -73,10 +72,11 @@
 
     .recleaner__text {
       font-weight: 400;
-      font-size: 18px;
-      line-height: 22px;
+      font-size: 16px;
+      line-height: 18px;
       letter-spacing: 2px;
       margin-bottom: 50px;
+      z-index: -10;
     }
 
     .recleaner__user {
@@ -112,7 +112,7 @@
   }
 
   &__image {
-    max-width: 600px;
+    max-width: 520px;
     perspective: 1000px;
 
     img {
@@ -121,29 +121,37 @@
       inset: 0;
       transform-style: preserve-3d;
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-      transition: transform .5s ease;
-
-      &:hover {
-        transform: translateZ(0) rotateY(20deg);
-        transition: transform .5s ease;
-      }
+      transition: transform 0.6s ease, z-index 0.6s ease;
 
       &:nth-child(1) {
         position: relative;
         z-index: 3;
+        left: 0;
+        transform: translateZ(30px) rotateY(10deg);
+        transition: transform .5s ease-in-out;
+
       }
 
       &:nth-child(2) {
         position: absolute;
-        z-index: -1;
-        left: -15%;
+        z-index: 2;
+        left: -25%;
+        transform: translateZ(20px) rotateY(10deg);
       }
 
       &:nth-child(3) {
         position: absolute;
-        z-index: -2;
-        left: -25%;
+        z-index: 1;
+        left: -58%;
+        transform: translateZ(10px) rotateY(10deg);
+      }
+
+      &:hover {
+        transform: translateZ(0) rotateY(0) scale(1.1);
+        z-index: 5;
+        transition: transform 0.6s ease, z-index 0.6s ease;
       }
     }
   }
+
 }
