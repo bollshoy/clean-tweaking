@@ -14,7 +14,7 @@ const Header = () => {
 		<header className="header">
 			<div className="header__container container">
 				<div className="header__logo">
-					<a href="/" className="logo">CleanTweaking</a>
+					<NavLink to={'/'} className={'logo'}>CleanTweaking</NavLink>
 				</div>
 				<nav className="header__menu">
 					<div className={`burger ${open ? 'open' : ''}`} onClick={handleClick}>
