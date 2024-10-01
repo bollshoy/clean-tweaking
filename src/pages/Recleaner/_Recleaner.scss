@@ -34,6 +34,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 180px;
 
   &__container {
     display: flex;
@@ -183,6 +184,7 @@
         position: relative;
         z-index: 3;
         left: 0;
+        top: 4%;
         transform: translateZ(30px) rotateY(10deg);
         transition: transform 1s ease-in-out;
 
@@ -192,6 +194,7 @@
         position: absolute;
         z-index: 2;
         left: -25%;
+        top: -6%;
         transform: translateZ(20px) rotateY(10deg);
         transition: transform 1s ease-in-out;
 
@@ -200,10 +203,10 @@
       &:nth-child(3) {
         position: absolute;
         z-index: 1;
-        left: -58%;
+        left: -55%;
+        top: -12%;
         transform: translateZ(10px) rotateY(10deg);
         transition: transform 1s ease-in-out;
-
       }
 
       &:hover {
