@@ -110,11 +110,12 @@ const Recleaner = () => {
 							<button onClick={incrementUserCount} className="recleaner__btn">
 								<a href="#" className="recleaner__link">Скачать</a>
 							</button>
-							<span className="recleaner__count">Скачали {userCount} раз</span>
+							<span className="recleaner__count">Скачали {userCount} раз(а)</span>
 						</div>
 					</div>
 				</div>
 			</section>
+			<div className="recleaner__line"></div>
 			<div className="recleaner__social" id="social">
 				{recleanerList.map((item) => (
 					<div key={item.id} className="recleaner__item">
