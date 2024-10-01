@@ -218,6 +218,12 @@
   }
 }
 
+@media screen and (max-width: 1440px) {
+  .recleaner__image {
+    max-width: 400px;
+  }
+}
+
 @media screen and (max-width: 1200px){
   .recleaner__image {
     max-width: 300px;
