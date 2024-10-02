@@ -10,11 +10,18 @@ import vk from '../../assets/icons/vk.svg'
 import github from '../../assets/icons/github.svg'
 import discord from '../../assets/icons/discord.svg'
 import home from '../../assets/icons/home.svg'
+// advantages
+import defense from '../../assets/icons/advantages/defense.svg'
+import security from '../../assets/icons/advantages/security.svg'
+import update from '../../assets/icons/advantages/update.svg'
+import visual from '../../assets/icons/advantages/visual.svg'
 import './_Recleaner.scss'
 import {NavLink} from 'react-router-dom'
+import advantages from '../../components/Advantages/Advantages.jsx'
 
 const Recleaner = () => {
 	const [userCount, setUserCount] = useState(0)
+	const [currentItem, setCurrentItem] = useState(1)
 	
 	const fetchUserCount = async () => {
 		try {
@@ -90,6 +97,13 @@ const Recleaner = () => {
 		)
 	}, [])
 	
+	const advantagesList = [
+		{id: 1, description: 'Ваши данные находятся под полной защитой', image: defense},
+		{id: 2, description: 'Лучшая защита. Клиент ни разу не был взломан за все время', image: security},
+		{id: 3, description: 'Частые обновление. Наш клиент обновляется регулярно', image: update},
+		{id: 4, description: 'Красивы визуалы, которые привлекают внимание', image: visual},
+	];
+	
 	return (
 		<>
 			<div className="recleaner__bg"></div>
@@ -113,31 +127,48 @@ const Recleaner = () => {
 			</div>
 			<section className="recleaner">
 				<div className="recleaner__container container">
-					<div className="recleaner__image">
-						<img src={recleaner1} alt=""/>
-						<img src={recleaner2} alt=""/>
-						<img src={recleaner3} alt=""/>
-					</div>
 					<div className="recleaner__content">
-						<div className="recleaner__logo">
-							<img src={logo} alt="logo" className="recleaner__logo-img"/>
-							<h6 className="recleaner__title">RECLEANER</h6>
+						<div className="recleaner__content-image">
+							<img src={recleaner1} alt=""/>
+							<img src={recleaner2} alt=""/>
+							<img src={recleaner3} alt=""/>
 						</div>
-						<span className="recleaner__subtitle">
-						101 проблема - 1 решение
+						<div className="recleaner__contents">
+							<div className="recleaner__logo">
+								<img src={logo} alt="logo" className="recleaner__logo-img"/>
+								<h6 className="recleaner__title">RECLEANER</h6>
+							</div>
+							<span className="recleaner__subtitle">
+							101 проблема - 1 решение
 						</span>
-						<p className="recleaner__text">
-							Портативная программа для быстрой <br/>
-							настройки системы, обширным магазином <br/>
-							приложений, очистки мусора и многое другое!
-						</p>
-						<div className="recleaner__user">
-							<button onClick={incrementUserCount} className="recleaner__btn">
-								<a href="#" className="recleaner__link">Скачать</a>
-							</button>
-							<span
-								className="recleaner__count">Скачали {userCount} раз(а)</span>
+							<p className="recleaner__text">
+								Портативная программа для быстрой <br/>
+								настройки системы, обширным магазином <br/>
+								приложений, очистки мусора и многое другое!
+							</p>
+							<p className="recleaner__text">
+								Забудьте о волнениях по поводу свободного <br/>
+								места на диске, утечек оперативной памяти и <br/>
+								мониторинга ваших действий Windows!
+							</p>
+							<div className="recleaner__user">
+								<button onClick={incrementUserCount} className="recleaner__btn">
+									<a href="#" className="recleaner__link">Скачать</a>
+								</button>
+								<span
+									className="recleaner__count">Скачали {userCount} раз(а)</span>
+							</div>
 						</div>
+					</div>
+					<div className="recleaner__advantages">
+						<ul className="advantages__list">
+							{advantagesList.map(item => (
+								<li key={item.id} className="advantages__item">
+									<img src={item.image} alt="" className="advantages__img"/>
+									<p className="advantages__text">{item.description}</p>
+								</li>
+							))}
+						</ul>
 					</div>
 				</div>
 			</section>
